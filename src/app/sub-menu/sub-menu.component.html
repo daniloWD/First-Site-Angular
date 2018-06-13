@@ -1,0 +1,12 @@
+<!-- <ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item" *ngIf=""><a href="#">Library</a></li>
+  <li class="breadcrumb-item active">Data</li>
+</ol> -->
+
+<div>
+  <ul class="nav py-4" *ngFor="let genre of genres">
+    <button type="button" class="btn btn-default btn-lg btn-rounded waves-light" routerLink="{{genre}}">{{genre}}</button>
+  </ul>
+  <button type="button" class="btn btn-default btn-lg btn-rounded waves-light" routerLink="api/oracleDB">API</button>
+</div>

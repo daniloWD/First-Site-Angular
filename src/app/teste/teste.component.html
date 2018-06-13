@@ -1,0 +1,6 @@
+<ul *ngFor="let dado of dados">
+    <a routerLink="{{findAndReplace(dado[0])}}">
+        <li>Nome do banco: {{dado[0]}}</li>
+        <li>Estado: {{dado[1]}}</li>
+    </a>
+</ul>

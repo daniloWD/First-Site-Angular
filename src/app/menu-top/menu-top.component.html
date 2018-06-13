@@ -1,0 +1,82 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark cyan lighten-4 sticky-top" role="navigation"> -->
+<nav class="navbar navbar-expand-lg navbar-light blue-grey lighten-5 sticky-top" role="navigation">
+
+    <div class="container-fluid">
+        <!-- Image and text -->
+        <a class="navbar-brand" routerLink="">
+            <img src="../assets/logo.png" height="100" alt="">
+        </a>
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+            <form class="form-inline form">
+                <input class="form-control" type="search" placeholder="Digite a música que deseja ouvir!!!" aria-label="Search">
+                <button class=" btn btn-outline-white search" type="submit">
+                    <i class="fa fa-music" aria-hidden="true"></i>
+                </button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user"></i>
+                        <span class="caret"></span>
+                    </a>
+                    <ul id="login-dp" class="dropdown-menu dropdown-menu-right">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>Login via</p>
+                                    <div class="social-buttons">
+                                        <a href="#" class="btn btn-fb">
+                                            <i class="fa fa-facebook"></i>
+                                            <span> Facebook</span>
+                                        </a>
+                                        <a href="#" class="btn btn-tw">
+                                            <i class="fa fa-twitter"></i>
+                                            <span> Twitter</span>
+                                        </a>
+                                    </div>
+                                    <p>ou</p>
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputEmail2">Endereço de Email</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Endereço de Email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputPassword2">Senha</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Senha" required>
+                                            <div class="help-block text-right">
+                                                <a href="">Esqueceu sua senha ?</a>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Mantenha-me conectado
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="bottom text-center">
+                                    Novo aqui ?
+                                    <a href="#">
+                                        <b>Junte-se a nós</b>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Collapsible content -->
+    </div>
+    <!--/ Container-->
+</nav>
+<!--/.Navbar-->
