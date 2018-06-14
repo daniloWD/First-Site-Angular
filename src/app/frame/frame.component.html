@@ -5,15 +5,16 @@
     <div class="frame animated bounceInDown rounded" *ngFor="let music of musics">
       <div class="top">
           <!-- routerLink="{{music.genre}} -->
-        <a title="{{findAndReplace(music.name)}}" routerLink="{{music.genre}}/{{music.name}}">
-          <img src="{{music.image}}" alt="{{music.name}}" />
+        <!-- <a title="{{findAndReplace(music.name)}}" routerLink="{{music.genre}}/{{music.name}}"> -->
+          <a title="{{findAndReplace(music[1])}}" routerLink="{{music[4]}}/{{music[1]}}">
+          <img src="{{music[5]}}" alt="{{music[1]}}" />
           <span class="play"></span>
         </a>
       </div>
       <div class="bot">
 
-        <h5>{{findAndReplace(music.name)}}</h5>
-        <h4>{{music.singer}}</h4>
+        <h5>{{findAndReplace(music[1])}}</h5>
+        <h4>{{music[2]}}</h4>
       </div>
 
     </div>

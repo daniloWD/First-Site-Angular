@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 
-import { MusicService } from 'src/app/music.service';
+import { MusicApiService } from 'src/app/music-api.service';
 
 @Component({
   selector: 'app-music-detail',
@@ -11,11 +11,11 @@ import { MusicService } from 'src/app/music.service';
 })
 export class MusicDetailComponent implements OnInit {
 
-  public music;
+  dado : any = [];
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private service: MusicService,
+    private musicApiService: MusicApiService,
     private routeNavigation: Router) { }
     // this.activatedRoute.params.subscribe(params => {
     //   this.name = params['name'];
@@ -26,18 +26,32 @@ export class MusicDetailComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(e => {
       const name = e['name'];
-      this.music = this.service.getbyName(name);
+      // this.music = this.service.getbyName(name);
+      this.getDados(name);
     });
   }
 
-  findAndReplace(name: string) {
-    length = name.length;
-    for (var i = 0; i < length; i++) {
-      name = name.replace("-", " ");
-    }
-    return name;
+  getDados(name) {
+    this.musicApiService.getDadoByName(name)
+      .subscribe(
+        data => {
+          
+          this.dado = data;//your data
+          // console.log(this.dado);
+          // for (var i = 0; i < this.dado.length; i++){
+            // console.log(this.dados[i][1]);
+            // }
+        });
+  }
 
-  };
+  // findAndReplace(name: string) {
+  //   length = name.length;
+  //   for (var i = 0; i < length; i++) {
+  //     name = name.replace("-", " ");
+  //   }
+  //   return name;
+
+  // };
 
   // getMusic(name: string) {
   //   return dados[name];
