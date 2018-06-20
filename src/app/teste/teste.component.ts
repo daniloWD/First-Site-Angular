@@ -10,11 +10,12 @@ import { TesteService } from 'src/app/teste.service';
 export class TesteComponent implements OnInit {
 
   dados: any = []  ;
+  count: any = []  ;
   constructor(private testeService: TesteService, ) { }
 
   ngOnInit() {
     this.getDados();
-
+    this.getCountDados();
   }
 
   getDados() {
@@ -22,6 +23,20 @@ export class TesteComponent implements OnInit {
       .subscribe(
         data => {
           this.dados = data;//your data
+          
+          // for (var i = 0; i < this.dados.length; i++){
+          //   console.log(this.dados[i][1]);
+            // }
+        });
+
+        
+  }
+
+  getCountDados() {
+    this.testeService.getCountDadosDB()
+      .subscribe(
+        data => {
+          this.count = data;//your data
           
           // for (var i = 0; i < this.dados.length; i++){
           //   console.log(this.dados[i][1]);

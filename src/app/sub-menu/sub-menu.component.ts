@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-
-import { MusicService } from '../music.service';
+import { MusicApiService } from '../music-api.service';
 
 @Component({
   selector: 'app-sub-menu',
@@ -10,19 +9,32 @@ import { MusicService } from '../music.service';
 })
 export class SubMenuComponent implements OnInit {
 
-  genres = [];
-  constructor(private router: Router, private musicService:MusicService) {
+  genres: any = [];
+  constructor(private router: Router, private musicApiService: MusicApiService) {
 
-    this.genres = musicService.getAllGenres();
+    // this.genres = musicService.getAllGenres();
 
-   }
-
-    
-  ngOnInit() {
-    
-    
   }
 
-  
+
+  ngOnInit() {
+
+    this.getGenres();
+  }
+
+  getGenres() {
+    this.musicApiService.getAllGenres()
+      .subscribe(
+        data => {
+          console.log(data);
+          this.genres = data;//your data
+          // console.log(this.dado);
+          // for (var i = 0; i < this.dado.length; i++){
+          // console.log(this.dados[i][1]);
+          // }
+        });
+  }
+
+
 
 }

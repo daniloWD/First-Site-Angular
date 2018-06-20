@@ -13,6 +13,7 @@ import { TesteService } from 'src/app/teste.service';
 export class OracleDetailsComponent implements OnInit {
 
   dados: any = []  ;
+  count: any = []  ;
   constructor(
     private activatedRoute: ActivatedRoute,
     private testeService: TesteService,
@@ -22,14 +23,16 @@ export class OracleDetailsComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(e => {
       const name = e['name'];
-      
-      this.getDados(name);
+      const uf = e['uf'];
+      console.log(uf);
+      this.getDados(name,uf);
+      this.getDadosCount(name,uf);
     });
     
   }
 
-  getDados(name) {
-    this.testeService.getDado(name)
+  getDados(name,uf) {
+    this.testeService.getDado(name,uf)
       .subscribe(
         data => {
           this.dados = data;//your data
@@ -37,6 +40,18 @@ export class OracleDetailsComponent implements OnInit {
           for (var i = 0; i < this.dados.length; i++){
             // console.log(this.dados[i][1]);
             }
+        });
+  }
+
+  getDadosCount(name,uf) {
+    this.testeService.getCountDado(name,uf)
+      .subscribe(
+        data => {
+          this.count = data;//your data
+          console.log(this.count);
+          // for (var i = 0; i < this.dados.length; i++){
+            // console.log(this.dados[i][1]);
+            // }
         });
   }
 

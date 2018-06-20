@@ -108,8 +108,8 @@ export class MusicService {
     }
 
 
-    public getbyName(name) {
-        return this.musics.find(p => p.name === name);
+    public getbyId(id) {
+        return this.musics.find(p => p.id === id);
     }
 
     public getbyGenre(genre) {

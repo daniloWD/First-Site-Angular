@@ -2,8 +2,8 @@ import { dados } from './../list-music';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { MusicApiService } from '../music-api.service';
 
-import { MusicService } from 'src/app/music.service';
 
 @Component({
   selector: 'app-musical-genre',
@@ -12,21 +12,34 @@ import { MusicService } from 'src/app/music.service';
 })
 export class MusicalGenreComponent implements OnInit {
 
-  musics = [];
+  musics:any = [];
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private musicService: MusicService,
+    private musicApiService: MusicApiService,
     private routeNavigation: Router
     
   ) {}
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(e => {
-      this.musics = this.musicService.getbyGenre(e['genre']);
-      
+      const genre = e['genre'];
+      this.getMusicByGenre(genre);
     });
   }
+
+  getMusicByGenre(genre: string){
+    this.musicApiService.getMusicByGenre(genre)
+      .subscribe(
+        data => {
+          console.log(data);
+          this.musics = data;//your data
+          // console.log(this.dado);
+          // for (var i = 0; i < this.dado.length; i++){
+            // console.log(this.dados[i][1]);
+            // }
+        });
+  };
 
   findAndReplace(name: string) {
     length = name.length;

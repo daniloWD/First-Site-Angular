@@ -16,9 +16,19 @@ export class TesteService {
     return this.http.get('http://localhost:8000/api/oracleDB');
   }
 
-  getDado(name: string) {
-    return this.http.get('http://localhost:8000/api/oracleDB/'+ name);
+  getCountDadosDB() {
+    return this.http.get('http://localhost:8000/api/oracleDB/count');
   }
 
-  
+  getDado(name: string,uf: string) {
+    return this.http.get('http://localhost:8000/api/oracleDB/'+ name+'/'+uf);
+  }
+
+  getCountDado(name: string,uf: string){
+    return this.http.get('http://localhost:8000/api/oracleDB/count/'+ name+'/'+uf);
+  }
+
+  getCountRegiao(name: string) {
+    return this.http.get('http://localhost:8000/api/oracleDB/join/'+ name);
+  }
 }

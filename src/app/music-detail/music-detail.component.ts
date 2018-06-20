@@ -25,17 +25,18 @@ export class MusicDetailComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(e => {
-      const name = e['name'];
-      // this.music = this.service.getbyName(name);
-      this.getDados(name);
+      const id = e['id'];
+      // this.music = this.service. getbyName(name);
+      this.getDados(id);
     });
   }
 
-  getDados(name) {
-    this.musicApiService.getDadoByName(name)
+  getDados(id) {
+    console.log(id);
+    this.musicApiService.getDadoById(id)
       .subscribe(
         data => {
-          
+          console.log(data);
           this.dado = data;//your data
           // console.log(this.dado);
           // for (var i = 0; i < this.dado.length; i++){
@@ -44,14 +45,14 @@ export class MusicDetailComponent implements OnInit {
         });
   }
 
-  // findAndReplace(name: string) {
-  //   length = name.length;
-  //   for (var i = 0; i < length; i++) {
-  //     name = name.replace("-", " ");
-  //   }
-  //   return name;
+  findAndReplace(name: string) {
+    length = name.length;
+    for (var i = 0; i < length; i++) {
+      name = name.replace("-", " ");
+    }
+    return name;
 
-  // };
+  };
 
   // getMusic(name: string) {
   //   return dados[name];

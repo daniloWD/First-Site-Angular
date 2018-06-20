@@ -1,0 +1,37 @@
+<form method="POST">
+    <fieldset>
+        <legend>Informações da Música:</legend>
+        <div class="row">
+            <div class="col">
+                <label for="name">Nome da música:</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="col">
+                <label for="singer">Nome do cantor:</label>
+                <input type="text" class="form-control" id="singer">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="genre">Genero da música:</label>
+                <select class="form-control" id="genre">
+                    <option selected>Escolha o genero...</option>
+                    <option *ngFor="let genre of genres">{{genre}}</option>
+                </select>
+            </div>
+
+            <div class="col">
+                <label for="video">Link do video:</label>
+                <input type="text" class="form-control" id="video">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="image">Link da imagem:</label>
+                <input type="text" class="form-control" id="image">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="fa fa-arrow-circle-right mr-1"></i> Enviar</button>
+    </fieldset>
+</form>

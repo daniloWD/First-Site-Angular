@@ -12,8 +12,16 @@ export class MusicApiService {
     return this.http.get('http://localhost:8000/api/musics');
   }
 
-  getDadoByName(name: string) {
-    return this.http.get('http://localhost:8000/api/musics/'+ name);
+  getDadoById(id: number) {
+    return this.http.get('http://localhost:8000/api/musics/'+ id);
+  }
+
+  getAllGenres() {
+    return this.http.get('http://localhost:8000/api/genres');
+  }
+
+  getMusicByGenre(genre: string) {
+    return this.http.get('http://localhost:8000/api/genres/'+genre);
   }
 }
 

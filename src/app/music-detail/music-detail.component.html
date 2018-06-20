@@ -1,12 +1,13 @@
-<div class="center">
+<div class="center" *ngFor="let detalhe of dado">
     <div class="name">
-            <h1>{{dado[1]}}</h1> 
-            <h2>{{dado[2]}}</h2>
-    <audio controls>
-      <source src="../assets/{dado[1]}}.mp3" type="audio/mpeg">
-  </audio>
-</div>
+        <h1>{{findAndReplace(detalhe[1])}}</h1>
+        <h2>{{detalhe[5]}}</h2>
+        <audio controls>
+            <source src="../assets/{{detalhe[1]}}.mp3" type="audio/mpeg">
+        </audio>
+    </div>
     <video width="560" height="315" controls>
-        <source src="../assets/{dado[1]}}.mp4" type="video/mp4">
+        <source src="../assets/{{detalhe[1]}}.mp4" type="video/mp4">
     </video>
+    <!-- <iframe width="560" height="315" src="{{detalhe[3]}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
 </div>

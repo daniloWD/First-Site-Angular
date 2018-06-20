@@ -14,6 +14,8 @@ import { SubMenuComponent } from './sub-menu/sub-menu.component';
 import { MusicalGenreComponent } from './musical-genre/musical-genre.component';
 import { TesteComponent } from './teste/teste.component';
 import { OracleDetailsComponent } from './oracle-details/oracle-details.component';
+import { RegiaoDetailsComponent } from './regiao-details/regiao-details.component';
+import { InsertFormComponent } from './insert-form/insert-form.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { OracleDetailsComponent } from './oracle-details/oracle-details.componen
     SubMenuComponent,
     MusicalGenreComponent,
     TesteComponent,
-    OracleDetailsComponent
+    OracleDetailsComponent,
+    RegiaoDetailsComponent,
+    InsertFormComponent
   ],
   imports: [
     BrowserModule,

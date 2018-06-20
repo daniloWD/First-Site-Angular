@@ -1,5 +1,7 @@
+<h1>Existem {{count[0][0]}} bancos Bradesco com reclamações.</h1>
 <ul *ngFor="let dado of dados">
-    <a routerLink="{{findAndReplace(dado[0])}}">
+    <a routerLink="{{findAndReplace(dado[0])}}/{{dado[1]}}">
+        <!-- <a routerLink="{{findAndReplace(dado[0])}}">  -->
         <li>Nome do banco: {{dado[0]}}</li>
         <li>Estado: {{dado[1]}}</li>
     </a>
