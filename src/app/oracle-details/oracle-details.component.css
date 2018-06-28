@@ -7,11 +7,22 @@ ul {
     display: inline-block;
     border: 1px solid;
     border-radius: 5px;
+    background-color: gray;
+}
+
+.active-menu {
+    background-color: green !important;
+    /* aqui é para reforçar esta propriedade, caso tenha definido alguma outra cor neste elemento mais abaixo */
+}
+
+.S {
+    background-color: green !important;
+}
+
+.N {
+    background-color: red !important;
 }
 
 li {
     padding-left: 10px;
-    
-    
-   
 }

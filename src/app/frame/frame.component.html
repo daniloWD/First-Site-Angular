@@ -1,11 +1,9 @@
 <app-sub-menu></app-sub-menu>
-<div class="container-fluid">
+<!-- <div class="container-fluid">
 
-  <div class="row">
-    <div class="frame animated bounceInDown rounded" *ngFor="let music of musics">
-      <div class="top">
-          <!-- routerLink="{{music.genre}} -->
-        <!-- <a title="{{findAndReplace(music.name)}}" routerLink="{{music.genre}}/{{music.name}}"> -->
+    <div class="row">
+        <div class="frame animated bounceInDown rounded" *ngFor="let music of musics"> -->
+<!-- <div class="top">
           <a title="{{findAndReplace(music[1])}}" routerLink="{{music[2]}}/{{music[0]}}">
           <img src="{{music[4]}}" alt="{{music[1]}}" />
           <span class="play"></span>
@@ -15,7 +13,39 @@
 
         <h5>{{findAndReplace(music[1])}}</h5>
         <h4>{{music[5]}}</h4>
-      </div>
+      </div> -->
 
+<!-- 
     </div>
-  </div>
+  </div> -->
+<div class="container-fluid">
+
+    <div class="row">
+        <!--Card Dark-->
+        <div class="card animated bounceInDown" *ngFor="let music of musics">
+            <!--Card image-->
+            <div class="card-body rounded-top">
+
+                <!--Title-->
+                <h3 class="card-title">{{findAndReplace(music[1])}}</h3>
+
+            </div>
+            <div class=" view overlay " mdbWavesEffect>
+                <a title="{{findAndReplace(music[1])}}" routerLink="{{music[2]}}/{{music[0]}}">
+                    <img src="{{music[4]}}" class="img-fluid " alt="{{music[1]}}">
+                    <span class="play"></span>
+                    <div class="mask rgba-white-slight "></div>
+                </a>
+            </div>
+            <!--/.Card image-->
+            <!--Card content-->
+            <div class="card-body rounded-bottom">
+
+                <h4>{{music[5]}}</h4>
+
+            </div>
+            <!--/.Card content-->
+        </div>
+        <!--/.Card Dark-->
+    </div>
+</div>

@@ -1,55 +1,45 @@
-.row {
-    font-family: "Times New Roman", Times, serif;
-    padding: 10px;
-}
-
-.frame {
-    margin: 20px 10px;
-    width: 15%;
-    height: 300px;
+.card {
+    margin: 10px auto;
+    margin-left: 10px;
+    width: 20%;
+    height: 350px;
     border: 2px solid black;
     border-radius: 5px;
 }
 
-.top {
-    width: 100%;
-    height: 70%;
+.view {
+    background-size: cover;
+    height: 60%;
 }
 
-.top img {
+.img-fluid {
+    height: 100%;
     width: 100%;
-    height: 200px;
-}
-.top img:hover {
-    -webkit-transform: scale(0.95);
-    -moz-transform: scale(0.95);
-    -o-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    transform: scale(0.95);
-    }
-
-.top a { 
-    text-decoration: none; 
-    display:block; 
-}
-.top a span.play {
-    display:block;
-    background: url('https://cdn4.iconfinder.com/data/icons/miu-flat-social/60/play_store-32.png') center center no-repeat; 
-    margin: -120px 10px 0 0; 
-    height: 80px; 
-    position: relative; 
-    z-index: 100; 
-    opacity: 0.8; 
-    filter: alpha(opacity=80); 
-}
-.top a:hover span.play { 
-    background:url('https://cdn3.iconfinder.com/data/icons/social-circle/512/social_4-32.png') center center no-repeat;
 }
 
-.bot {
-   text-align: center;
+.view a {
+    text-decoration: none;
+}
+
+.view a span.play {
+    display: block;
+    background: url('https://cdn4.iconfinder.com/data/icons/miu-flat-social/60/play_store-32.png') center center no-repeat;
+    margin: -150px 10px 0 0;
+    height: 80px;
+    position: relative;
+    z-index: 100;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.view a:hover span.play {
+    background: url('https://cdn3.iconfinder.com/data/icons/social-circle/512/social_4-32.png') center center no-repeat;
+}
+
+.card-body {
+    text-align: center;
     width: 100%;
-    height: 30%;
+    height: 10%;
     vertical-align: center;
-
+    padding: 0;
 }

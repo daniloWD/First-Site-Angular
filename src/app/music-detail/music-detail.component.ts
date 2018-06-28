@@ -36,7 +36,6 @@ export class MusicDetailComponent implements OnInit {
     this.musicApiService.getDadoById(id)
       .subscribe(
         data => {
-          console.log(data);
           this.dado = data;//your data
           // console.log(this.dado);
           // for (var i = 0; i < this.dado.length; i++){

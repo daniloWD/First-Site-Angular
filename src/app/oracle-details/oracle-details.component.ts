@@ -14,6 +14,7 @@ export class OracleDetailsComponent implements OnInit {
 
   dados: any = []  ;
   count: any = []  ;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private testeService: TesteService,
@@ -25,8 +26,8 @@ export class OracleDetailsComponent implements OnInit {
       const name = e['name'];
       const uf = e['uf'];
       console.log(uf);
-      this.getDados(name,uf);
       this.getDadosCount(name,uf);
+      this.getDados(name,uf);
     });
     
   }
@@ -54,6 +55,8 @@ export class OracleDetailsComponent implements OnInit {
             // }
         });
   }
+
+  
 
   findAndReplace(name: string) {
     length = name.length;

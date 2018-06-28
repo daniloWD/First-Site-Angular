@@ -14,7 +14,7 @@ export class RegiaoDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getCountRegiao();
+    // this.getCountRegiao();
   }
 
   getCountRegiao(){

@@ -1,26 +1,15 @@
-<h1>Existem {{count[0][0]}} itens.</h1>
+<h1>Existem {{count[0]}} itens.</h1>
+
 <ul *ngFor="let dado of dados">
-    <li>Ano: {{dado[0]}}</li>
-    <li>Data Arquivamento: {{dado[1]}}</li>
-    <li>Data de Abertura: {{dado[2]}}</li>
-    <li>Código da região: {{dado[3]}}</li>
-    <li>Região: {{dado[4]}}</li>
-    <li>UF: {{dado[5]}}</li>
-    <li>STRRazão Social: {{dado[6]}}</li>
-    <li>STRNome Fantasia: {{dado[7]}}</li>
-    <li>Tipo: {{dado[8]}}</li>
-    <li>CNPJ: {{dado[9]}}</li>
-    <li>Radicel CNPJ: {{dado[10]}}</li>
-    <li>Razão Social RFB: {{dado[11]}}</li>
-    <li>Nome Fantsia RFB: {{dado[12]}}</li>
-    <li>CNAE Principal: {{dado[13]}}</li>
-    <li>Descrição CNAE Principal: {{dado[14]}}</li>
-    <li>Atendida: {{dado[15]}}</li>
-    <li>Código do Assunto: {{dado[16]}}</li>
-    <li>Descrição do Assunto: {{dado[17]}}</li>
-    <li>Código do Problema: {{dado[18]}}</li>
-    <li>Descrição do Problema: {{dado[19]}}</li>
-    <li>Sexo Consumidor: {{dado[20]}}</li>
-    <li>Faixa Etária do Consumidor: {{dado[21]}}</li>
-    <li>CEP do Consumidor: {{dado[22]}}</li>
+    <li ngClass="{{dado[6]}}">Ano: {{dado[0]}}</li>
+    <li ngClass="{{dado[6]}}">Data Arquivamento: {{dado[1]}}</li>
+    <li ngClass="{{dado[6]}}">Data de Abertura: {{dado[2]}}</li>
+    <li ngClass="{{dado[6]}}">Código da região: {{dado[3]}}</li>
+    <li ngClass="{{dado[6]}}">UF: {{dado[4]}}</li>
+    <li ngClass="{{dado[6]}}">Atendida: {{dado[6]}}</li>
+    <li ngClass="{{dado[6]}}">Cod_Assunto: {{dado[7]}}</li>
+    <li ngClass="{{dado[6]}}">Cod_Problema: {{dado[8]}}</li>
+    <li ngClass="{{dado[6]}}">Sexo Consumidor: {{dado[9]}}</li>
+    <li ngClass="{{dado[6]}}">Faixa Etária do Consumidor: {{dado[10]}}</li>
+    <li ngClass="{{dado[6]}}">CEP do Consumidor: {{dado[11]}}</li>
 </ul>

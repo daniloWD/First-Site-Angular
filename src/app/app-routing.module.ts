@@ -14,7 +14,7 @@ const routes: Routes = [
   // { path: '/:name', component: AerialsComponent },
   { path: '', component: FrameComponent},
   // { path: 'api/oracleDB', component: TesteComponent},
-  { path: 'api/oracleDB', component: RegiaoDetailsComponent},
+  { path: 'api/oracleDB', component: TesteComponent},
   { path: 'api/oracleDB/inserir', component: InsertFormComponent},
   { path: ':genre/:id', component: MusicDetailComponent},
   { path: ':genre', component: MusicalGenreComponent},

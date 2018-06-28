@@ -3,11 +3,14 @@
         <h1>{{findAndReplace(detalhe[1])}}</h1>
         <h2>{{detalhe[5]}}</h2>
         <audio controls>
-            <source src="../assets/{{detalhe[1]}}.mp3" type="audio/mpeg">
+            <source src='http://localhost:8000/audio/{{detalhe[1]}}' type="audio/mpeg">
         </audio>
     </div>
-    <video width="560" height="315" controls>
+    <video id='videoPlayer' width="560" height="315" controls>
+        <source src='http://localhost:8000/video/{{detalhe[1]}}' type="video/mp4">
+      </video>
+    <!-- <video width="560" height="315" controls>
         <source src="../assets/{{detalhe[1]}}.mp4" type="video/mp4">
-    </video>
+    </video> -->
     <!-- <iframe width="560" height="315" src="{{detalhe[3]}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
 </div>
