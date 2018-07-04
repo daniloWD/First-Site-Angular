@@ -3,11 +3,11 @@ import { Router } from "@angular/router";
 import { MusicApiService } from '../music-api.service';
 
 @Component({
-  selector: 'app-sub-menu',
-  templateUrl: './sub-menu.component.html',
-  styleUrls: ['./sub-menu.component.css']
+  selector: 'app-sub-menu-mongo',
+  templateUrl: './sub-menu-mongo.component.html',
+  styleUrls: ['./sub-menu-mongo.component.css']
 })
-export class SubMenuComponent implements OnInit {
+export class SubMenuMongoComponent implements OnInit {
 
   genres: any = [];
   constructor(private router: Router, private musicApiService: MusicApiService) {
@@ -19,13 +19,11 @@ export class SubMenuComponent implements OnInit {
 
   ngOnInit() {
 
-    this.getGenres();
+    this.getGenresMongo();
   }
 
- 
-
-  getGenres() {
-    this.musicApiService.getAllGenres()
+  getGenresMongo() {
+    this.musicApiService.getAllGenresMongo()
       .subscribe(
         data => {
           console.log(data);

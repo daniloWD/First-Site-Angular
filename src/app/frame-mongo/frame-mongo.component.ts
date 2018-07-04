@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { Music } from '../music';
-import { dados } from '../list-music';
-import { MusicService } from '../music.service';
 import { MusicApiService } from '../music-api.service';
 
 @Component({
-  selector: 'app-frame',
-  templateUrl: './frame.component.html',
-  styleUrls: ['./frame.component.css']
+  selector: 'app-frame-mongo',
+  templateUrl: './frame-mongo.component.html',
+  styleUrls: ['./frame-mongo.component.css']
 })
-export class FrameComponent implements OnInit {
+export class FrameMongoComponent implements OnInit {
 
-
+  
   musics: any = [];
 
   constructor(private router: Router, private musicApiService: MusicApiService) {
@@ -23,13 +20,11 @@ export class FrameComponent implements OnInit {
 
 
   ngOnInit() {
-    this.getAllDados();
+    this.getAllDadosMongo();
   }
 
-
-  
-  getAllDados() {
-    this.musicApiService.getAllDados()
+  getAllDadosMongo() {
+    this.musicApiService.getAllDadosMongo()
       .subscribe(
         data => {
           this.musics = data;//your data
@@ -38,24 +33,22 @@ export class FrameComponent implements OnInit {
           //   console.log(this.dados[i][1]);
           // }
         });
-
+  
+  
 
   }
 
 
-  findAndReplace(name: string) {
-    var i = 0;
-    length = name.length;
-    for (i; i < length; i++) {
+  // findAndReplace(name: string) {
+  //   var i = 0;
+  //   length = name.length;
+  //   for (i; i < length; i++) {
 
-      name = name.replace("-", " ");
+  //     name = name.replace("-", " ");
 
-    }
-    return name;
+  //   }
+  //   return name;
 
-  };
-
-
-
+  // };
 
 }

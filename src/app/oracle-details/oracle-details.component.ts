@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 
 
-import { TesteService } from 'src/app/teste.service';
+import { ProcondwService } from 'src/app/procondw.service';
 
 @Component({
   selector: 'app-oracle-details',
@@ -17,7 +17,7 @@ export class OracleDetailsComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private testeService: TesteService,
+    private procondwService: ProcondwService,
     private routeNavigation: Router
   ) { }
 
@@ -33,7 +33,7 @@ export class OracleDetailsComponent implements OnInit {
   }
 
   getDados(name,uf) {
-    this.testeService.getDado(name,uf)
+    this.procondwService.getDado(name,uf)
       .subscribe(
         data => {
           this.dados = data;//your data
@@ -45,7 +45,7 @@ export class OracleDetailsComponent implements OnInit {
   }
 
   getDadosCount(name,uf) {
-    this.testeService.getCountDado(name,uf)
+    this.procondwService.getCountDado(name,uf)
       .subscribe(
         data => {
           this.count = data;//your data

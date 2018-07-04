@@ -12,10 +12,13 @@ import { MusicDetailComponent } from './music-detail/music-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SubMenuComponent } from './sub-menu/sub-menu.component';
 import { MusicalGenreComponent } from './musical-genre/musical-genre.component';
-import { TesteComponent } from './teste/teste.component';
 import { OracleDetailsComponent } from './oracle-details/oracle-details.component';
 import { RegiaoDetailsComponent } from './regiao-details/regiao-details.component';
 import { InsertFormComponent } from './insert-form/insert-form.component';
+import { ProcondwComponent } from './procondw/procondw.component';
+import { FrameMongoComponent } from './frame-mongo/frame-mongo.component';
+import { SubMenuMongoComponent } from './sub-menu-mongo/sub-menu-mongo.component';
+
 
 @NgModule({
   declarations: [
@@ -24,12 +27,14 @@ import { InsertFormComponent } from './insert-form/insert-form.component';
     FrameComponent,
     MusicDetailComponent,
     PageNotFoundComponent,
+    ProcondwComponent,
     SubMenuComponent,
     MusicalGenreComponent,
-    TesteComponent,
     OracleDetailsComponent,
     RegiaoDetailsComponent,
-    InsertFormComponent
+    InsertFormComponent,
+    FrameMongoComponent,
+    SubMenuMongoComponent
   ],
   imports: [
     BrowserModule,

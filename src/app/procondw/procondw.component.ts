@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TesteService } from 'src/app/teste.service';
+import { ProcondwService } from 'src/app/procondw.service';
 
 @Component({
-  selector: 'app-teste',
-  templateUrl: './teste.component.html',
-  styleUrls: ['./teste.component.css']
+  selector: 'app-procondw',
+  templateUrl: './procondw.component.html',
+  styleUrls: ['./procondw.component.css']
 })
-export class TesteComponent implements OnInit {
+export class ProcondwComponent implements OnInit {
 
   dados: any = []  ;
   count: any = []  ;
-  constructor(private testeService: TesteService, ) { }
+  constructor(private testeService: ProcondwService, ) { }
 
   ngOnInit() {
     this.getDados();

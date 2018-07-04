@@ -6,7 +6,7 @@
 
 <div>
     <ul class="nav py-4" *ngFor="let genre of genres">
-        <button type="button" class="btn btn-default btn-lg btn-rounded waves-light" routerLink="{{genre}}">{{genre}}</button>
+        <button type="button" class="btn btn-default btn-lg btn-rounded waves-light" routerLink="{{genre.id}}">{{genre.name}}</button>
     </ul>
     <button type="button" class="btn btn-default btn-lg btn-rounded waves-light" routerLink="api/oracleDB">API</button>
     <button type="button" class="btn btn-default btn-lg btn-rounded waves-light" routerLink="api/oracleDB/inserir">Inserir</button>

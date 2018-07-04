@@ -1,0 +1,45 @@
+.card {
+    margin: 10px auto;
+    margin-left: 10px;
+    width: 20%;
+    height: 350px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.view {
+    background-size: cover;
+    height: 60%;
+}
+
+.img-fluid {
+    height: 100%;
+    width: 100%;
+}
+
+.view a {
+    text-decoration: none;
+}
+
+.view a span.play {
+    display: block;
+    background: url('https://cdn4.iconfinder.com/data/icons/miu-flat-social/60/play_store-32.png') center center no-repeat;
+    margin: -150px 10px 0 0;
+    height: 80px;
+    position: relative;
+    z-index: 100;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.view a:hover span.play {
+    background: url('https://cdn3.iconfinder.com/data/icons/social-circle/512/social_4-32.png') center center no-repeat;
+}
+
+.card-body {
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    vertical-align: center;
+    padding: 0;
+}

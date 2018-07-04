@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TesteService } from '../teste.service';
+import { ProcondwService } from '../procondw.service';
 
 @Component({
   selector: 'app-regiao-details',
@@ -10,7 +10,7 @@ export class RegiaoDetailsComponent implements OnInit {
 
   count ;
   constructor(
-    private testeService: TesteService
+    private testeService: ProcondwService
   ) { }
 
   ngOnInit() {
